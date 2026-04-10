@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Prose styles for lesson content */
+.prose {
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #f1f5f9;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.prose h1 { font-size: 2rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+
+.prose p { margin-bottom: 1.25rem; }
+
+.prose a { color: #60a5fa; text-decoration: underline; }
+.prose a:hover { color: #93c5fd; }
+
+.prose strong { color: #f1f5f9; font-weight: 600; }
+.prose em { font-style: italic; }
+
+.prose ul, .prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose ul li { list-style-type: disc; margin-bottom: 0.5rem; }
+.prose ol li { list-style-type: decimal; margin-bottom: 0.5rem; }
+
+.prose blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 1rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.prose code:not(pre code) {
+  background: #1e293b;
+  color: #7dd3fc;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-family: var(--font-geist-mono, monospace);
+}
+
+.prose pre {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose pre code {
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  font-family: var(--font-geist-mono, monospace);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.prose table th {
+  background: #1e293b;
+  color: #f1f5f9;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid #334155;
+}
+
+.prose table td {
+  padding: 0.625rem 1rem;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+
+.prose table tr:nth-child(even) { background: #0f172a; }
+
+/* TipTap editor styles */
+.ProseMirror {
+  outline: none;
+  color: #cbd5e1;
+}
+
+.ProseMirror p { margin-bottom: 1rem; color: #cbd5e1; }
+.ProseMirror h1, .ProseMirror h2, .ProseMirror h3 { color: #f1f5f9; font-weight: 700; margin: 1.5rem 0 0.75rem; }
+.ProseMirror h1 { font-size: 1.75rem; }
+.ProseMirror h2 { font-size: 1.375rem; }
+.ProseMirror h3 { font-size: 1.125rem; }
+.ProseMirror ul, .ProseMirror ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+.ProseMirror ul li { list-style: disc; margin-bottom: 0.25rem; }
+.ProseMirror ol li { list-style: decimal; margin-bottom: 0.25rem; }
+.ProseMirror blockquote { border-left: 3px solid #3b82f6; padding-left: 1rem; color: #94a3b8; font-style: italic; margin: 1rem 0; }
+.ProseMirror code:not(pre code) { background: #1e293b; color: #7dd3fc; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.875rem; }
+.ProseMirror pre { background: #0f172a; border: 1px solid #334155; border-radius: 0.5rem; padding: 1rem; overflow-x: auto; margin: 1rem 0; }
+.ProseMirror pre code { color: #e2e8f0; font-size: 0.875rem; }
+.ProseMirror table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.ProseMirror th { background: #1e293b; color: #f1f5f9; font-weight: 600; text-align: left; padding: 0.625rem 0.875rem; border: 1px solid #334155; }
+.ProseMirror td { padding: 0.5rem 0.875rem; border: 1px solid #334155; }
+.ProseMirror p.is-editor-empty:first-child::before { content: attr(data-placeholder); color: #475569; pointer-events: none; height: 0; float: left; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
