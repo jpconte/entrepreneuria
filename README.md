@@ -1,0 +1,2 @@
+# entrepreneuria
+Full IA entrepreneureship
