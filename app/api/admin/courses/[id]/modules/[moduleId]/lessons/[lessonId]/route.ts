@@ -40,7 +40,7 @@ export async function PUT(
   const body = await req.json();
   const result = lessonSchema.safeParse(body);
   if (!result.success) {
-    return NextResponse.json({ error: result.error.errors[0].message }, { status: 400 });
+    return NextResponse.json({ error: result.error.issues[0].message }, { status: 400 });
   }
 
   const sanitized = result.data.content !== undefined

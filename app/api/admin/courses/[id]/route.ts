@@ -50,7 +50,7 @@ export async function PUT(
     const body = await req.json();
     const result = courseSchema.safeParse(body);
     if (!result.success) {
-      return NextResponse.json({ error: result.error.errors[0].message }, { status: 400 });
+      return NextResponse.json({ error: result.error.issues[0].message }, { status: 400 });
     }
 
     const course = await prisma.course.update({ where: { id }, data: result.data });

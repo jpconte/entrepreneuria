@@ -25,7 +25,7 @@ export async function PUT(
   const body = await req.json();
   const result = moduleSchema.safeParse(body);
   if (!result.success) {
-    return NextResponse.json({ error: result.error.errors[0].message }, { status: 400 });
+    return NextResponse.json({ error: result.error.issues[0].message }, { status: 400 });
   }
 
   const mod = await prisma.module.update({ where: { id: moduleId }, data: result.data });
